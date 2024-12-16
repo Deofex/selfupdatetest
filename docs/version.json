@@ -1,4 +1,7 @@
 {
-    "current_version": "1.0.1",
-    "darwin_arm64_update_binary": "https://deofex.github.io/selfupdatetest/selfupdatetest-1-0-1-darwin-arm64"
+    "current_version": "1.0.2",
+    "darwin_arm64_update_binary": "https://deofex.github.io/selfupdatetest/selfupdatetest-1-0-2-darwin-arm64",
+    "darwin_amd64_update_binary": "https://deofex.github.io/selfupdatetest/selfupdatetest-1-0-2-darwin-amd64",
+    "linux_amd64_update_binary": "https://deofex.github.io/selfupdatetest/selfupdatetest-1-0-2-linux-amd64",
+    "windows_amd64_update_binary": "https://deofex.github.io/selfupdatetest/selfupdatetest-1-0-2-windows-amd64.exe"
 }

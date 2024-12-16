@@ -2,14 +2,17 @@ package main
 
 import (
 	"fmt"
-	"os"
+
+	"github.com/deofex/selfupdatetest/selfupdatest/selfupdate"
 )
 
-func main() {
-	path, err := os.Executable()
-	if err != nil {
-		panic(err)
-	}
+var version string
 
-	fmt.Println("Old version at: ", path)
+func main() {
+	fmt.Printf("Binary version: %s", version)
+	err := selfupdate.SelfUpdate(version)
+	if err != nil {
+		fmt.Printf("Unable to update, using old version: %v\n", err)
+	}
+	fmt.Println("En hier komt de kubectl magie de we al hebben")
 }
