@@ -16,7 +16,7 @@ build: check-version
 	@echo "Building version $(VERSION)..."
 	CGO_ENABLED=0 GOOS=darwin GOARCH=amd64 go build -ldflags="-s -w -X main.version=$(VERSION)" -o $(OUTPUT_FILE_PREFIX)-darwin-amd64
 	CGO_ENABLED=0 GOOS=darwin GOARCH=arm64 go build -ldflags="-s -w -X main.version=$(VERSION)" -o $(OUTPUT_FILE_PREFIX)-darwin-arm64
-	CGO_ENABLED=0 GOOS=windows GOARCH=amd64 go build -ldflags="-s -w -X main.version=$(VERSION)" -o $(OUTPUT_FILE_PREFIX)-windows-amd64
+	CGO_ENABLED=0 GOOS=windows GOARCH=amd64 go build -ldflags="-s -w -X main.version=$(VERSION)" -o $(OUTPUT_FILE_PREFIX)-windows-amd64.exe
 	CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -ldflags="-s -w -X main.version=$(VERSION)" -o $(OUTPUT_FILE_PREFIX)-linux-amd64
 
 # Check if VERSION is set

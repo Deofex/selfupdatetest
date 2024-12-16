@@ -1,11 +1,11 @@
 package selfupdate
 
 type updateVersionInfo struct {
-	CurrentVersion           string `json:"current_version"`
-	WindowsAmd64UpdateBinary string `json:"windows_amd64_update_binary"`
-	LinuxAmd64UpdateBinary   string `json:"linux_amd64_update_binary"`
-	DarwinAmd64UpdateBinary  string `json:"darwin_amd64_update_binary"`
-	DarwinArm64UpdateBinary  string `json:"darwin_arm64_update_binary"`
+	CurrentVersion     string `json:"current_version"`
+	WindowsAmd64Binary string `json:"windows_amd64_binary"`
+	LinuxAmd64Binary   string `json:"linux_amd64_binary"`
+	DarwinAmd64Binary  string `json:"darwin_amd64_binary"`
+	DarwinArm64Binary  string `json:"darwin_arm64_binary"`
 }
 
 type osInfo struct {

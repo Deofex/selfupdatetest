@@ -29,7 +29,7 @@ func SelfUpdate(currentVersion string) (err error) {
 	if err != nil {
 		return
 	}
-	fmt.Println("Updated successfully installed, restarting executable...")
+	fmt.Println("Update successfully installed, restarting executable...")
 	err = restartProgram(path)
 	if err != nil {
 		fmt.Println("Unable to restart program")
@@ -103,15 +103,15 @@ func getBinaryDownloadPath(versionInfo updateVersionInfo) (url string, err error
 	var updateUrl string
 	switch osi.OS {
 	case "windows":
-		updateUrl = versionInfo.WindowsAmd64UpdateBinary
+		updateUrl = versionInfo.WindowsAmd64Binary
 	case "linux":
-		updateUrl = versionInfo.LinuxAmd64UpdateBinary
+		updateUrl = versionInfo.LinuxAmd64Binary
 	case "darwin":
 		switch osi.Arch {
 		case "amd64":
-			updateUrl = versionInfo.DarwinAmd64UpdateBinary
+			updateUrl = versionInfo.DarwinAmd64Binary
 		case "arm64":
-			updateUrl = versionInfo.DarwinArm64UpdateBinary
+			updateUrl = versionInfo.DarwinArm64Binary
 		default:
 			return "", fmt.Errorf("unsupported Architecture: %s (OS: %s)", osi.Arch, osi.OS)
 		}
