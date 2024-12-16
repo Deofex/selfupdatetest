@@ -9,7 +9,7 @@ import (
 var version string
 
 func main() {
-	fmt.Printf("Binary version: %s", version)
+	fmt.Printf("Binary version: %s\n", version)
 	err := selfupdate.SelfUpdate(version)
 	if err != nil {
 		fmt.Printf("Unable to update, using old version: %v\n", err)
